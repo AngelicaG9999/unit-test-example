@@ -3,9 +3,31 @@ const response = require('../../network/response')
 const router = Router();
 const ctrl = require('./index');
 const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm} = require('../../calculators/environment')
-const { areaCirculo } = require('../../calculators/calculo1')
+const { areaCirculo } = require('../../calculators/calculo1');
+const { areaRectangulo } = require('../../calculators/calculo2');
+
 
 const tableInjected = 'my_table'
+
+router.get('/test_endpoint1', async (req, res) => {
+    try {
+        response.success(req, res, `entraste`, 200);    
+    } catch (error) {
+        response.error(req, res, error.message, 500);
+    }
+});
+
+// Ejercicios de clase
+router.post('/calculoRectangulo/:altura', async (req, res) => {
+    try {
+        const base = req.body.base
+        const altura = req.params.altura
+        response.success(req, res, areaRectangulo(base,altura), 200);    
+    } catch (error) {
+        response.error(req, res, error.message, 500);
+    }
+});
+
 
 router.get('/env_test/:fuel', async (req, res) => {
     const fuel = req.params.fuel
@@ -76,6 +98,7 @@ router.post('/add', async (req, res) => {
         response.error(req, res, error.message, 500);
     }
 });
+
 
 
 router.put('/update', async (req, res) => {
