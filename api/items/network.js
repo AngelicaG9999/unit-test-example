@@ -17,7 +17,7 @@ router.get('/test_endpoint1', async (req, res) => {
     }
 });
 
-// Ejercicios de clase
+// Ejercicios de clase - se envian datos por parametro de body y url 
 router.post('/calculoRectangulo/:altura', async (req, res) => {
     try {
         const base = req.body.base
