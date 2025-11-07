@@ -3,11 +3,9 @@ const response = require('../../network/response')
 const router = Router();
 const ctrl = require('./index');
 
-const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm, energyKm, emisionKm, monthlySavings, annualSavings, youngTree, oldTree} = require('../../calculators/environment')
-const { areaCirculo } = require('../../calculators/calculo1');
+const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm, energyKm, emisionKm, monthlySavings, annualSavings, youngTree, oldTree, savedEnergy,
+avoidedEmissions, monthlySavings, annualSavings, youngTree, oldTree, energyH2Cylinders, energyH2LowPresure, energyConsumed, hydrogenMass, litersRequired} = require('../../calculators/environment')
 const { areaRectangulo } = require('../../calculators/calculo2');
-
-const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm} = require('../../calculators/environment')
 const { areaCirculo } = require('../../calculators/calculo1')
 const {Ejercicio} = require('../../ejercicios/ejercicio1')
 
@@ -26,7 +24,7 @@ router.get('/env_test/:fuel', async (req, res) => {
     const cost_electrical_km = costElectricalKM(electrical_consumption, 238.25)
     const monthly_savings = monthlySavings(fuel_cost_km, cost_electrical_km, 30000)
     const avoided_Emissions = avoidedEmissions(emisiones_km, 30000)
-    const energy_H2_Cylinders = energyH2Cylinders(1)
+    const energy_H2_Cylinders = energyH2Cylinders(81.14)
     const energy_H2_LowPresure = energyH2LowPresure(energy_H2_Cylinders)
     try {
         const list = {

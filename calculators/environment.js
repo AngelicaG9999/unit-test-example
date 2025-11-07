@@ -157,7 +157,6 @@ module.exports = {
     youngTree, 
     oldTree, 
     tiMonth, 
-    fuelEnergySelector,
     energyH2Cylinders,
     energyH2LowPresure,
     energyConsumed,
