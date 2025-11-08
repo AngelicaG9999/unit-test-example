@@ -27,6 +27,7 @@ router.get('/env_test/:fuel', async (req, res) => {
     const avoided_Emissions = avoidedEmissions(emisiones_km, 30000)
     const energy_H2_Cylinders = energyH2Cylinders(81.14)
     const energy_H2_LowPresure = energyH2LowPresure(energy_H2_Cylinders)
+    const hydrogen_Mass = hydrogenMass(energy_H2_LowPresure)
 
     try {
         const list = {
@@ -50,7 +51,7 @@ router.get('/env_test/:fuel', async (req, res) => {
             "energy_H2_LowPresure": energyH2LowPresure(energy_H2_Cylinders),
             "energyConsumed": energyConsumed(energy_H2_LowPresure),
             "hydrogenMass": hydrogenMass(energy_H2_LowPresure),
-            "litersRequired": litersRequired(1)
+            "litersRequired": litersRequired(hydrogen_Mass)
 
         }
         response.success(req, res, list, 200);    

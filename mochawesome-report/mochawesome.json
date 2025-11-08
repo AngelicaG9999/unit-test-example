@@ -1,23 +1,1007 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2025-05-03T15:45:48.920Z",
-    "end": "2025-05-03T15:45:48.921Z",
-    "duration": 1,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "suites": 22,
+    "tests": 27,
+    "passes": 22,
+    "pending": 2,
+    "failures": 3,
+    "start": "2025-11-08T11:29:20.946Z",
+    "end": "2025-11-08T11:29:20.972Z",
+    "duration": 26,
+    "testsRegistered": 27,
+    "passPercent": 88,
+    "pendingPercent": 7.4074074074074066,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    false
+    {
+      "uuid": "de6abbe3-6c3e-4cf0-b684-0c2f90c69a2c",
+      "title": "",
+      "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+      "file": "/test/env_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1775939-3569-4202-b4e3-50180a698176",
+          "title": "Cálculos funciones",
+          "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+          "file": "/test/env_test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "4c45ec0e-39b4-4e10-8f92-bcd4ba39a54d",
+              "title": "Ti Month",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function tiMonth",
+                  "fullTitle": "Cálculos funciones Ti Month Calculate the function tiMonth",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(tiMonth(2.8), 0.0023039138595752906)",
+                  "err": {},
+                  "uuid": "79bd6c3d-37e2-415c-af52-349f588442fc",
+                  "parentUUID": "4c45ec0e-39b4-4e10-8f92-bcd4ba39a54d",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Return 0 when IPC = 0",
+                  "fullTitle": "Cálculos funciones Ti Month Return 0 when IPC = 0",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.strictEqual(tiMonth(0), 0);",
+                  "err": {},
+                  "uuid": "8af6d84e-582d-427b-a54a-2bf614bb453a",
+                  "parentUUID": "4c45ec0e-39b4-4e10-8f92-bcd4ba39a54d",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Return NaN if the value is not a number",
+                  "fullTitle": "Cálculos funciones Ti Month Return NaN if the value is not a number",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.ok(isNaN(tiMonth(\"abc\")));",
+                  "err": {},
+                  "uuid": "c8afb855-7e77-41a9-bf3f-a3ceccffd3b6",
+                  "parentUUID": "4c45ec0e-39b4-4e10-8f92-bcd4ba39a54d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "79bd6c3d-37e2-415c-af52-349f588442fc",
+                "8af6d84e-582d-427b-a54a-2bf614bb453a",
+                "c8afb855-7e77-41a9-bf3f-a3ceccffd3b6"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "b170fb04-90b3-4643-9205-e335cd08c1aa",
+              "title": "Fuel Energy Selector",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "gasoline case",
+                  "fullTitle": "Cálculos funciones Fuel Energy Selector gasoline case",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.deepStrictEqual(fuelEnergySelector(\"gasoline\"),{\n    \"fuel_price\": 16700,\n    \"fuel_energy\": 35.58,\n    \"emision_factor\": 69.25\n})",
+                  "err": {},
+                  "uuid": "80b23bdc-0a27-45b5-b8f5-4ebacf696556",
+                  "parentUUID": "b170fb04-90b3-4643-9205-e335cd08c1aa",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "diesel case",
+                  "fullTitle": "Cálculos funciones Fuel Energy Selector diesel case",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.deepStrictEqual(fuelEnergySelector(\"diesel\"),{\n    \"fuel_price\": 11795,\n    \"fuel_energy\": 40.7,\n    \"emision_factor\": 74.01\n})",
+                  "err": {},
+                  "uuid": "56cca97c-1b1f-4134-8547-b7a2a83a9599",
+                  "parentUUID": "b170fb04-90b3-4643-9205-e335cd08c1aa",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "80b23bdc-0a27-45b5-b8f5-4ebacf696556",
+                "56cca97c-1b1f-4134-8547-b7a2a83a9599"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "8a76cff4-2430-44a3-b21c-2621473edb71",
+              "title": "Electrical Consumption",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Electrical Consumption",
+                  "fullTitle": "Cálculos funciones Electrical Consumption Calculate the function Electrical Consumption",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(electricalConsumption(81.14, 200), 0.4507777777777778);",
+                  "err": {},
+                  "uuid": "7f8518d1-dcdc-447e-9a91-5a9da44a9631",
+                  "parentUUID": "8a76cff4-2430-44a3-b21c-2621473edb71",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7f8518d1-dcdc-447e-9a91-5a9da44a9631"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "dde30e59-a518-4e0b-b118-e8da79adae75",
+              "title": "Cost Electrical km",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Cost electrical KM",
+                  "fullTitle": "Cálculos funciones Cost Electrical km Calculate the function Cost electrical KM",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(costElectricalKM(electrical_consumption, 238.25).toFixed(12), 107.397805555556)",
+                  "err": {},
+                  "uuid": "93fd1ebf-f6fc-48a3-a082-84d1a1d0c2ec",
+                  "parentUUID": "dde30e59-a518-4e0b-b118-e8da79adae75",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "93fd1ebf-f6fc-48a3-a082-84d1a1d0c2ec"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "898797cc-6d8c-4301-8524-90a94187bc95",
+              "title": "Combustion Consumption",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Combustion Consumption",
+                  "fullTitle": "Cálculos funciones Combustion Consumption Calculate the function Combustion Consumption",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(combustionConsumption(electrical_consumption).toFixed(14), 1.66954732510288)",
+                  "err": {},
+                  "uuid": "cacc3b10-df9c-4aba-b4b7-b399e0a03107",
+                  "parentUUID": "898797cc-6d8c-4301-8524-90a94187bc95",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "cacc3b10-df9c-4aba-b4b7-b399e0a03107"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "e7c8f1c8-9b0e-4947-9af7-fa8c46561648",
+              "title": "Fuel Consumption",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Fuel Consumption",
+                  "fullTitle": "Cálculos funciones Fuel Consumption Calculate the function Fuel Consumption",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(fuelConsumption(combustion_consumption, 40.7), 0.04102081879859657)",
+                  "err": {},
+                  "uuid": "0a8b17cd-2abb-4810-98b6-ed1379a8548c",
+                  "parentUUID": "e7c8f1c8-9b0e-4947-9af7-fa8c46561648",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0a8b17cd-2abb-4810-98b6-ed1379a8548c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "e1684356-68fa-4fa6-b11b-b943376cff56",
+              "title": "Fuel Efficiency",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the funcion Fuel Efficiency",
+                  "fullTitle": "Cálculos funciones Fuel Efficiency Calculate the funcion Fuel Efficiency",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(fuelEfficiency(fuel_consuption).toFixed(14), 24.3778654177964)",
+                  "err": {},
+                  "uuid": "661684d7-3899-461f-a53d-1b237de8306b",
+                  "parentUUID": "e1684356-68fa-4fa6-b11b-b943376cff56",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "661684d7-3899-461f-a53d-1b237de8306b"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a6b71b1e-6d92-4039-a02f-3f73ddd91ad6",
+              "title": "Fuel Cost Km",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Fuel Cost Km",
+                  "fullTitle": "Cálculos funciones Fuel Cost Km Calculate the function Fuel Cost Km",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(fuelCostKm(16700, fuel_consuption), 685.0476739365628)",
+                  "err": {},
+                  "uuid": "fab27e6c-1f55-45c6-9f62-8221d12a25d9",
+                  "parentUUID": "a6b71b1e-6d92-4039-a02f-3f73ddd91ad6",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should CANCEL this test",
+                  "fullTitle": "Cálculos funciones Fuel Cost Km should CANCEL this test",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "pending",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": true,
+                  "context": null,
+                  "code": "if (true) {\n        console.log(\"simulating test cancelation...\");\n        this.skip();\n    }\n    assert.ok(true);",
+                  "err": {},
+                  "uuid": "8483ecb6-1c17-401e-9de8-dc5d7afa52ad",
+                  "parentUUID": "a6b71b1e-6d92-4039-a02f-3f73ddd91ad6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "fab27e6c-1f55-45c6-9f62-8221d12a25d9"
+              ],
+              "failures": [],
+              "pending": [
+                "8483ecb6-1c17-401e-9de8-dc5d7afa52ad"
+              ],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d69c7b57-560c-4927-af64-f3eca3b15890",
+              "title": "Energy Km",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Energy Km",
+                  "fullTitle": "Cálculos funciones Energy Km Calculate the function Energy Km",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(energyKm(combustion_consumption).toFixed(2), 6010370.37)",
+                  "err": {},
+                  "uuid": "8abb0344-4a5d-4539-a841-30910d061c81",
+                  "parentUUID": "d69c7b57-560c-4927-af64-f3eca3b15890",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8abb0344-4a5d-4539-a841-30910d061c81"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c75d854d-8524-4862-878e-91309fd2ee08",
+              "title": "Emision Km",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Emision Km with emision factor gasoline",
+                  "fullTitle": "Cálculos funciones Emision Km Calculate the function Emision Km with emision factor gasoline",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(emisionKm(energy_km, data.emision_factor_gasoline).toFixed(2), 416.22)",
+                  "err": {},
+                  "uuid": "1dd7d777-8c61-485e-84df-edb748a70579",
+                  "parentUUID": "c75d854d-8524-4862-878e-91309fd2ee08",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Calculate the function Emision Km with emision factor diesel",
+                  "fullTitle": "Cálculos funciones Emision Km Calculate the function Emision Km with emision factor diesel",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(emisionKm(energy_km, data.emision_factor_diesel).toFixed(2), 444.83)",
+                  "err": {},
+                  "uuid": "184896a9-9eda-4947-9b87-0a7ce1ebe60c",
+                  "parentUUID": "c75d854d-8524-4862-878e-91309fd2ee08",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1dd7d777-8c61-485e-84df-edb748a70579",
+                "184896a9-9eda-4947-9b87-0a7ce1ebe60c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "34b52feb-f704-4c72-a35e-7b7da91f7443",
+              "title": "Saved Energy",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Saved Energy",
+                  "fullTitle": "Cálculos funciones Saved Energy Calculate the function Saved Energy",
+                  "timedOut": false,
+                  "duration": 4,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(savedEnergy(combustion_consumption, electrical_consumption,30000).toFixed(10), 36353.0864197530)",
+                  "err": {
+                    "message": "AssertionError: '36563.0864197531' == 36353.086419753",
+                    "estack": "AssertionError [ERR_ASSERTION]: '36563.0864197531' == 36353.086419753\n    at Context.<anonymous> (test/env_test.js:140:20)\n    at process.processImmediate (node:internal/timers:485:21)",
+                    "diff": null
+                  },
+                  "uuid": "45fe4f6c-9853-4f6d-9c10-4fab252b5f2b",
+                  "parentUUID": "34b52feb-f704-4c72-a35e-7b7da91f7443",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "45fe4f6c-9853-4f6d-9c10-4fab252b5f2b"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 4,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "b23be8dd-c1be-4b88-bea4-34c4311abb84",
+              "title": "Avoided Emissions",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Avoided Emissions",
+                  "fullTitle": "Cálculos funciones Avoided Emissions Calculate the function Avoided Emissions",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(avoidedEmissions(emisiones_km,30000).toFixed(15), 0.180311111111111 )",
+                  "err": {},
+                  "uuid": "9b67f717-5c06-4fc3-be5f-41605692d6ed",
+                  "parentUUID": "b23be8dd-c1be-4b88-bea4-34c4311abb84",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "SKIPPED Calculate the function Avoided Emissions",
+                  "fullTitle": "Cálculos funciones Avoided Emissions SKIPPED Calculate the function Avoided Emissions",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "pending",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": true,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "564b7b37-8407-4d6d-9206-c054892aa586",
+                  "parentUUID": "b23be8dd-c1be-4b88-bea4-34c4311abb84",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "9b67f717-5c06-4fc3-be5f-41605692d6ed"
+              ],
+              "failures": [],
+              "pending": [
+                "564b7b37-8407-4d6d-9206-c054892aa586"
+              ],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3b6dcf6a-7011-4d58-b227-8dc72def0867",
+              "title": "Monthly Savings",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Monthly Savings",
+                  "fullTitle": "Cálculos funciones Monthly Savings Calculate the function Monthly Savings",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(monthlySavings(fuel_cost_km, cost_electrical_km,30000 ).toFixed(7), 1444124.6709525)",
+                  "err": {},
+                  "uuid": "4f2d6e77-e481-4d0e-8081-af502f7cd4a2",
+                  "parentUUID": "3b6dcf6a-7011-4d58-b227-8dc72def0867",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4f2d6e77-e481-4d0e-8081-af502f7cd4a2"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "9aa3f165-93fa-46c4-a94a-73e736e4e440",
+              "title": "Annual Savings",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Annual Savings",
+                  "fullTitle": "Cálculos funciones Annual Savings Calculate the function Annual Savings",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(annualSavings(monthly_savings,1).toFixed(5), 5913690527.55056)",
+                  "err": {},
+                  "uuid": "2fa62c7f-6274-46fe-b7d0-a428e65b9133",
+                  "parentUUID": "9aa3f165-93fa-46c4-a94a-73e736e4e440",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2fa62c7f-6274-46fe-b7d0-a428e65b9133"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "0cad3e8c-f9b5-4e5f-8a28-f84e594d1129",
+              "title": "Fuel Cost Km",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Young Tree",
+                  "fullTitle": "Cálculos funciones Fuel Cost Km Calculate the function Young Tree",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(youngTree(avoided_Emissions), 18)",
+                  "err": {},
+                  "uuid": "e712d33c-da6d-4025-b905-a8405fbb6a6a",
+                  "parentUUID": "0cad3e8c-f9b5-4e5f-8a28-f84e594d1129",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e712d33c-da6d-4025-b905-a8405fbb6a6a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "be055658-eb21-4c78-bbf0-deb9a69f3eca",
+              "title": "Old Tree",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Old Tree",
+                  "fullTitle": "Cálculos funciones Old Tree Calculate the function Old Tree",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(oldTree(avoided_Emissions), 6)",
+                  "err": {},
+                  "uuid": "81f38ef3-ad1b-41c2-8ff2-d9b041850ea1",
+                  "parentUUID": "be055658-eb21-4c78-bbf0-deb9a69f3eca",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "81f38ef3-ad1b-41c2-8ff2-d9b041850ea1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "1a6b3cfd-45d3-4005-9563-771a3ce47f27",
+              "title": "Energy H2 Cylinders",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Energy H2 Cylinders",
+                  "fullTitle": "Cálculos funciones Energy H2 Cylinders Calculate the function Energy H2 Cylinders",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(energyH2Cylinders(1), 1.85185185185185)",
+                  "err": {
+                    "message": "AssertionError: 1.8518518518518516 == 1.85185185185185",
+                    "estack": "AssertionError [ERR_ASSERTION]: 1.8518518518518516 == 1.85185185185185\n    at Context.<anonymous> (test/env_test.js:187:20)\n    at process.processImmediate (node:internal/timers:485:21)",
+                    "diff": "- 1.8518518518518516\n+ 1.85185185185185\n"
+                  },
+                  "uuid": "7cdc80ee-7bda-45e0-b2d2-4255831d4cad",
+                  "parentUUID": "1a6b3cfd-45d3-4005-9563-771a3ce47f27",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "7cdc80ee-7bda-45e0-b2d2-4255831d4cad"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "86a3e29f-c041-4d72-8108-2e2962cd1a4e",
+              "title": "Energy H2 LowPresure",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Energy H2 LowPresure",
+                  "fullTitle": "Cálculos funciones Energy H2 LowPresure Calculate the function Energy H2 LowPresure",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(energyH2LowPresure(energy_H2_Cylinders).toFixed(12), 158.167641325536)",
+                  "err": {},
+                  "uuid": "c83d22b1-14fe-4b34-8e3e-5746bb3b1e8d",
+                  "parentUUID": "86a3e29f-c041-4d72-8108-2e2962cd1a4e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c83d22b1-14fe-4b34-8e3e-5746bb3b1e8d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a94e50fe-b7a5-43b9-829b-e142121393ba",
+              "title": "Energy Consumed",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Energy Consumed",
+                  "fullTitle": "Cálculos funciones Energy Consumed Calculate the function Energy Consumed",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(energyConsumed(energy_H2_LowPresure).toFixed(10), 208.1153175336)",
+                  "err": {},
+                  "uuid": "f014b7c3-09c6-4724-8001-7ee435fb7756",
+                  "parentUUID": "a94e50fe-b7a5-43b9-829b-e142121393ba",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f014b7c3-09c6-4724-8001-7ee435fb7756"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ab8266df-d164-4f0d-9c0c-a3c6e90bbe51",
+              "title": "Hydrogen Mass",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Hydrogen Mass",
+                  "fullTitle": "Cálculos funciones Hydrogen Mass Calculate the function Hydrogen Mass",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(hydrogenMass(energy_H2_LowPresure).toFixed(13), 4.7455037901451)",
+                  "err": {},
+                  "uuid": "d5f9fba1-59bb-43ce-b0ab-a4031417108a",
+                  "parentUUID": "ab8266df-d164-4f0d-9c0c-a3c6e90bbe51",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d5f9fba1-59bb-43ce-b0ab-a4031417108a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ff52b31d-bc2c-4bac-8c60-564083bfa187",
+              "title": "Liters Required",
+              "fullFile": "/workspaces/unit-test-example/test/env_test.js",
+              "file": "/test/env_test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calculate the function Liters Required",
+                  "fullTitle": "Cálculos funciones Liters Required Calculate the function Liters Required",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.equal(litersRequired(hydrogen_Mass), 9)",
+                  "err": {
+                    "message": "AssertionError: 42.709534111305864 == 9",
+                    "estack": "AssertionError [ERR_ASSERTION]: 42.709534111305864 == 9\n    at Context.<anonymous> (test/env_test.js:217:20)\n    at process.processImmediate (node:internal/timers:485:21)",
+                    "diff": "- 42.709534111305864\n+ 9\n"
+                  },
+                  "uuid": "7a1f9d5f-8c9d-4a88-888e-b17efd81a515",
+                  "parentUUID": "ff52b31d-bc2c-4bac-8c60-564083bfa187",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "7a1f9d5f-8c9d-4a88-888e-b17efd81a515"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
   ],
   "meta": {
     "mocha": {
