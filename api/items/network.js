@@ -1,10 +1,11 @@
+
 const { Router } = require('express');
 const response = require('../../network/response')
 const router = Router();
 const ctrl = require('./index');
 
-const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm, energyKm, emisionKm, monthlySavings, annualSavings, youngTree, oldTree, savedEnergy,
-avoidedEmissions, monthlySavings, annualSavings, youngTree, oldTree, energyH2Cylinders, energyH2LowPresure, energyConsumed, hydrogenMass, litersRequired} = require('../../calculators/environment')
+const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm, energyKm, emisionKm, annualSavings, youngTree, oldTree, savedEnergy,
+avoidedEmissions, monthlySavings, energyH2Cylinders, energyH2LowPresure, energyConsumed, hydrogenMass, litersRequired} = require('../../calculators/environment')
 const { areaRectangulo } = require('../../calculators/calculo2');
 const { areaCirculo } = require('../../calculators/calculo1')
 const {Ejercicio} = require('../../ejercicios/ejercicio1')
@@ -26,6 +27,7 @@ router.get('/env_test/:fuel', async (req, res) => {
     const avoided_Emissions = avoidedEmissions(emisiones_km, 30000)
     const energy_H2_Cylinders = energyH2Cylinders(81.14)
     const energy_H2_LowPresure = energyH2LowPresure(energy_H2_Cylinders)
+
     try {
         const list = {
             "month_inflation": tiMonth(2.8),
@@ -39,7 +41,7 @@ router.get('/env_test/:fuel', async (req, res) => {
             "energy_Km": energy_km,
             "emision_Km": emisiones_km,
             "saved_Energy": savedEnergy(combustion_consumption, electrical_consumption,30000),
-            "avoided_Emissions": avoidedEmissions(emisiones_km, 30000),
+            "avoided_Emissions": avoided_Emissions,
             "monthly_Savings": monthlySavings(fuel_cost_km, cost_electrical_km, 30000),
             "annual_Savings": annualSavings(monthly_savings, 1 ),
             "young_Tree": youngTree(avoided_Emissions),
@@ -56,7 +58,6 @@ router.get('/env_test/:fuel', async (req, res) => {
         response.error(req, res, error.message, 500); 
     }
 })
-
 
 
 router.get('/list', async (req, res) => {
